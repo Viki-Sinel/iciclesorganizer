@@ -1,30 +1,56 @@
 <html>
-<body>
+  <body>
 
-<h2>Home page</h2>
-<form action="/action_page.php">
-Clock in/out number:<br>
-<input type="text" name="clockNumber">
-<br><br>
-First Name:<br>
-<input type="text" name="firstname">
-<br><br>
-Last Name:<br>
-<input type="text" name="lastname">
-<br><br>
-<button onclick="myFunction()">Register</button>
-</form>
 
-<script>
+    <h2>Register</h2>
+    <form action="/action_page.php">
 
-function myFunction() {
-  if (true) {
+      First Name<br>
+      <input type="text" name="firstName" onkeypress="return (event.charCode > 64 &&
+    	event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+    	placeholder="Joshua">
+      <br><br>
 
-  }
- location.replace("file:///Users/vikasinelnikova/github/project-2/home.html")
-}
+      Last Name<br>
+      <input type="text" name="lastName" onkeypress="return (event.charCode > 64 &&
+	    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+	    placeholder="Moran">
+      <br><br>
 
-</script>
+      Clock in/out number<br>
+      <input type='text' name="pin" maxlength="4" placeholder="1234" onkeypress='validate(event)' />
+      <br>
 
-</body>
+    </form>
+
+     <button onclick="myFunction()">Register</button>
+
+
+    <script>
+      function myFunction() {
+      location.replace("file:///Users/vikasinelnikova/github/project-2/home.html")
+      }
+
+      //pin allow only numeric
+      function validate(evt) {
+        var theEvent = evt || window.event;
+
+        // Handle paste
+        if (theEvent.type === 'paste') {
+            key = event.clipboardData.getData('text/plain');
+        } else {
+        // Handle key press
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+        }
+        var regex = /[0-9]|\./;
+        if( !regex.test(key) ) {
+          theEvent.returnValue = false;
+          if(theEvent.preventDefault) theEvent.preventDefault();
+        }
+      }
+
+    </script>
+
+  </body>
 </html>

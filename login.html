@@ -2,17 +2,30 @@
 
   <head>
 
-<title>WebApp</title>
-
+<title>WebApp Login</title>
+<link rel="stylesheet" href="style.css">
   </head>
 
 
   <body>
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form" action="/action_page.php">
+      Clock in/out number:<br>
+      <input type='text' maxlength="4" placeholder="1234" onkeypress='validate(event)' />
+      <br>
+      <button onclick="myFunction()">Login</button>
+        </form>
+
+      </div>
+
+    </div>
+
     <h1>Login</h1>
 
     <form action="/action_page.php">
   Clock in/out number:<br>
-  <input type="text" name="clockNumber">
+  <input type='text' maxlength="4" placeholder="1234" onkeypress='validate(event)' />
   <br>
     </form>
 <button onclick="myFunction()">Login</button>
@@ -20,9 +33,6 @@
 <script>
 
 function myFunction() {
-  if (true) {
-
-  }
  location.replace("file:///Users/vikasinelnikova/github/project-2/home.html")
 }
 
