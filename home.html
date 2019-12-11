@@ -1,23 +1,35 @@
 <html>
 <body>
 
-<h2>Home page</h2>
+<div class="home-page">
 
-<button onclick="myFunction1()">Login</button>
-<button onclick="myFunction2()">Register</button>
+  <div class="form">
 
+<h2><a href="">Inventory</a> | <a href="">Bases</a> | <a href="">to Clean</a></h2>
 
-<script>
+</div>
+</div>
 
-function myFunction1() {
- location.replace("file:///Users/vikasinelnikova/github/project-2/login.html")
+<style>
+
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?cs=srgb&dl=adorable-animal-blur-406014.jpg&fm=jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
-function myFunction2() {
- location.replace("file:///Users/vikasinelnikova/github/project-2/register.html")
+.form {
+  position: relative;
+  z-index: 1;
+  background: rgba(192, 192, 192, 0.8);
+  max-width: 1500px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  text-align: center;
 }
 
-</script>
+</style>
 
 </body>
 </html>
