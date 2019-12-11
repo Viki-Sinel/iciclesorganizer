@@ -1,56 +1,160 @@
 <html>
+
+<head> <title>Icicles Orginizer Registration</title>
+</head>
+
   <body>
 
+    <style>
 
-    <h2>Register</h2>
-    <form action="/action_page.php">
+    body {
+      background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?cs=srgb&dl=adorable-animal-blur-406014.jpg&fm=jpg);
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
 
-      First Name<br>
+    .login-page {
+      width: 300px;
+      padding: 10% 0 0;
+      margin: auto;
+      text-align: center;
+    }
+
+    .form {
+      position: relative;
+      z-index: 1;
+      background: rgba(192, 192, 192, 0.8);
+      max-width: 360px;
+      margin: 0 auto 100px;
+      padding: 45px;
+      text-align: center;
+    }
+
+    .form input {
+      font-family: "Roboto", sans-serif;
+      outline: 1;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .form button {
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: #4caf50;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #ffffff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .form button:hover,.form button:active{
+      background: #42a047;
+    }
+
+    .form .message {
+      margin: 15px;
+      font-size: 16px;
+    }
+
+    .form .message a {
+      text-decoration: none;
+    }
+
+    </style>
+
+
+
+    <div class="login-page">
+
+      <div class="form">
+
+
+      <form class="register-form">
+        <h2>Register</h2>
       <input type="text" name="firstName" onkeypress="return (event.charCode > 64 &&
-    	event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
-    	placeholder="Joshua">
-      <br><br>
-
-      Last Name<br>
-      <input type="text" name="lastName" onkeypress="return (event.charCode > 64 &&
-	    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
-	    placeholder="Moran">
-      <br><br>
-
-      Clock in/out number<br>
-      <input type='text' name="pin" maxlength="4" placeholder="1234" onkeypress='validate(event)' />
+      event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+      placeholder="First Name">
       <br>
 
-    </form>
 
-     <button onclick="myFunction()">Register</button>
+      <input type="text" name="lastName" onkeypress="return (event.charCode > 64 &&
+      event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+      placeholder="Last Name">
+      <br>
+
+
+      <input type='text' name="pin" maxlength="4" placeholder="Clock in/out" onkeypress='validate(event)' />
+      <br>
+      <button>create</button>
+      <p class="message">Already registered? <a href="file:///Users/vikasinelnikova/github/project-2/login.html">Login</a></p>
+      </form>
+
+      </div>
+    </div>
 
 
     <script>
-      function myFunction() {
-      location.replace("file:///Users/vikasinelnikova/github/project-2/home.html")
-      }
 
-      //pin allow only numeric
-      function validate(evt) {
-        var theEvent = evt || window.event;
+    function validate(evt) {
+      var theEvent = evt || window.event;
 
-        // Handle paste
-        if (theEvent.type === 'paste') {
-            key = event.clipboardData.getData('text/plain');
-        } else {
-        // Handle key press
-            var key = theEvent.keyCode || theEvent.which;
-            key = String.fromCharCode(key);
-        }
-        var regex = /[0-9]|\./;
-        if( !regex.test(key) ) {
-          theEvent.returnValue = false;
-          if(theEvent.preventDefault) theEvent.preventDefault();
-        }
+      // Handle paste
+      if (theEvent.type === 'paste') {
+          key = event.clipboardData.getData('text/plain');
+      } else {
+      // Handle key press
+          var key = theEvent.keyCode || theEvent.which;
+          key = String.fromCharCode(key);
       }
+      var regex = /[0-9]|\./;
+      if( !regex.test(key) ) {
+        theEvent.returnValue = false;
+        if(theEvent.preventDefault) theEvent.preventDefault();
+      }
+    }
 
     </script>
+
+    <script>
+    var mysql = require('mysql');
+
+    var con = mysql.createConnection({
+      host: "remotemysql.com";
+      user: "MOD9a4DDAW";
+      password: "eBQqqPSUFw";
+    });
+
+    con.connect(function(err){
+      if (err) throw err;
+      console.log("Connected!");
+    });
+
+    </script>
+<!--
+     <button onclick="myFunction()">Register</button>
+
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+    </script>
+
+    <script>
+      $('.message a').click(function(){
+      $('form').animate({height: "toggle", opacity: "toggle", "slow"});
+    });
+
+
+    </script>
+-->
+
 
   </body>
 </html>
