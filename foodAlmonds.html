@@ -11,7 +11,7 @@
 <div class="list-header">
 
 <div class="items">
-  <h3>Item</h3>
+  <h3>Items</h3>
 </div>
 
 <div class="box">
@@ -29,24 +29,44 @@
 
 <div class="item-list">
  <mat-list>
- <mat-list-item><b> Almonds </b></mat-list-item>
+ <mat-list-item> Almonds </mat-list-item><br>
+ <mat-list-item>Coconut Flakes </mat-list-item><br>
+ <mat-list-item>Fruity Pebbles </mat-list-item><br>
 </mat-list>
 </div>
 
-<div class="box-list">
+    <div class="box-list">
+  <!--<div class="box-change"
+  <form class="change-box">
+    <input type="number" max="10" min="0"><br>
+    <input type="number" max="10" min="0"><br>
+    <input type="number" max="10" min="0"><br>
+   </form>
+   </div>-->
+
   <mat-list>
   <mat-list-item> 0 </mat-list-item><br>
+  <mat-list-item> 1 </mat-list-item><br>
+  <mat-list-item> 3 </mat-list-item><br>
   </mat-list>
   </div>
 
   <div class="liter-list">
     <mat-list>
     <mat-list-item> 7 </mat-list-item><br>
+    <mat-list-item> 2 </mat-list-item><br>
+    <mat-list-item> 10 </mat-list-item><br>
     </mat-list>
     </div>
 
 </div>
 
+
+  <div class="form">
+    <form>
+   <button onclick="myFunction">Change</button>
+    </form>
+  </div>
 
 </div>
 
@@ -64,7 +84,7 @@ body {
   z-index: 1;
   background: rgba(192, 192, 192, 0.8);
   max-width: 800px;
-  margin: 0 auto 100px;
+  margin: 0 auto 20px;
   padding: 20px;
   text-align: left;
   color: #404040;
@@ -123,8 +143,51 @@ body {
   display: flex;
 }
 
+.box-change input {
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  border: 0;
+  margin: 0 0 5px;
+  padding: 2px;
+  box-sizing: border-box;
+  font-size: 8px;
+}
+
+.box-change {
+  display: none;
+}
+
+.form button {
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+outline: 0;
+background: #4caf50;
+width: 10%;
+border: 0;
+padding: 15px;
+color: #ffffff;
+font-size: 14px;
+cursor: pointer;
+}
+
+.form {
+  text-align: right;
+  max-width: 840px;
+  margin: 0 auto 100px;
+}
+
+.form button:hover,.form button:active{
+  background: #42a047;
+}
+
 
 </style>
+
+<script>
+function myfunction {
+  
+}
+</script>
 
 </body>
 </html>
