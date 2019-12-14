@@ -35,15 +35,8 @@
 </mat-list>
 </div>
 
-    <div class="box-list">
-  <!--<div class="box-change"
-  <form class="change-box">
-    <input type="number" max="10" min="0"><br>
-    <input type="number" max="10" min="0"><br>
-    <input type="number" max="10" min="0"><br>
-   </form>
-   </div>-->
 
+<div class="box-list">
   <mat-list>
   <mat-list-item> 0 </mat-list-item><br>
   <mat-list-item> 1 </mat-list-item><br>
@@ -51,12 +44,33 @@
   </mat-list>
   </div>
 
+  &nbsp
+
+  <div class="box-change">
+  <form class="change-box">
+    <input type="text" maxlenght="2" placeholder="qty"><br>
+    <input type="text" maxlenght="2" placeholder="qty"><br>
+    <input type="text" maxlenght="2" placeholder="qty"><br>
+  </form>
+  </div>
+
+
   <div class="liter-list">
     <mat-list>
     <mat-list-item> 7 </mat-list-item><br>
     <mat-list-item> 2 </mat-list-item><br>
     <mat-list-item> 10 </mat-list-item><br>
     </mat-list>
+    </div>
+
+&nbsp
+
+    <div class="box-change">
+    <form class="change-box">
+      <input type="text" maxlenght="2" placeholder="qty"><br>
+      <input type="text" maxlenght="2" placeholder="qty"><br>
+      <input type="text" maxlenght="2" placeholder="qty"><br>
+    </form>
     </div>
 
 </div>
@@ -154,7 +168,6 @@ body {
 }
 
 .box-change {
-  display: none;
 }
 
 .form button {
@@ -179,6 +192,7 @@ cursor: pointer;
 .form button:hover,.form button:active{
   background: #42a047;
 }
+
 
 
 </style>

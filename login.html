@@ -85,14 +85,45 @@
 
       <form class="login-form">
         <h2>Login</h2>
-      <input type='text' maxlength="4" placeholder="Clock in/out" onkeypress='validate(event)' />
+
+        <input type="text" id="firstName" name="firstname" onkeypress="return (event.charCode > 64 &&
+        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+        placeholder="First Name">
+
+      <input type='text' id="clockIn" maxlength="4" placeholder="Clock in/out" onkeypress='validate(event)' />
       <br>
-      <button>Login</button>
+      <!--<button type="button" onclick="getInfo()">Login</button>-->
       <p class="message">Not registered? <a href="file:///Users/vikasinelnikova/github/project-2/register.html">Register</a></p>
       </form>
+      <button type="button" onclick="getInfo()">Login</button>
     </div>
   </div>
 
+<script src="js/main.ls"></script>
+
+<script>
+
+var objPeople = [
+  {
+    firstname: "Viktoria",
+    clock: 2707
+  }
+
+
+  {
+    firstname: "Kaylie",
+    clock: 0000
+  }
+]
+
+function getInfo() {
+  var clockIn = document.getElementById("clock").value
+  colsole.log("your clock in/out number is: " + clockIn)
+}
+
+
+
+</script>
 
 <!--
     <form class="register-form">

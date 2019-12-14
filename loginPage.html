@@ -1,0 +1,29 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+
+<form>
+
+      <input id="clock">
+      <input id="firstname">
+      <input type="button" onclick="getInfo()" value="login">
+
+</form>
+
+<script src="js/main.js"></script>
+
+   <script>
+
+     function getInfo() {
+       var firstname = document.getElementById("firstname")
+       var clock = document.getElementById("clock")
+       console.log(firstname + " " + clock)
+     }
+
+   </script>
+
+  </body>
+
+</html>
