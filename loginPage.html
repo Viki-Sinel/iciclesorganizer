@@ -1,14 +1,15 @@
 <html>
   <head>
+    <title>Login Page</title>
   </head>
 
   <body>
 
 <form>
 
-      <input id="clock">
-      <input id="firstname">
-      <input type="button" onclick="getInfo()" value="login">
+      <input id="clock" maxlength="4" placeholder="Clock in/out *"><br>
+      <input id="firstname" maxlength="10" placeholder="First Name *"><br>
+      <button onclick="getInfo()">Login</button>
 
 </form>
 
@@ -16,10 +17,24 @@
 
    <script>
 
+   var personId2707 [
+     clock: "2707", firstname: "Victoria"
+   ]
+   var personId2708 [
+     clock: "2708", firstname: "Vicenta"
+   ]
+
      function getInfo() {
        var firstname = document.getElementById("firstname")
        var clock = document.getElementById("clock")
        console.log(firstname + " " + clock)
+     }
+
+     for(i = 0; i < objPeople.length; i++) {
+       if (firstname == objPeople[i].firstname && clock == objPeople[i].clock){
+     console.log(firstname + " is logged in!")
+
+       }
      }
 
    </script>
