@@ -1,0 +1,180 @@
+<html>
+
+<head>
+<title>Icicles Orginizer Home</title>
+</head>
+
+<body>
+
+<div class="home-page">
+
+  <header class="header">
+
+<div class="logo">
+<a href="file:///Users/vikasinelnikova/github/project-2/Prod_home.html"><img src ="/Users/vikasinelnikova/desktop/viktoriya/icicles/unnamed.png" alt=""></a>
+</div>
+
+<input class="menu-btn" type="checkbox" id="menu-btn"/>
+<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+  <font size="4"><b>
+    <ul class="menu">
+  <li><a href="file:///Users/vikasinelnikova/github/project-2/Prod_inventory.html">Inventory</a></li>
+  <li><a href="file:///Users/vikasinelnikova/github/project-2/Prod_bases.html">Bases</a></li>
+  <li><a href="file:///Users/vikasinelnikova/github/project-2/Prod_tasks.html">Tasks</a></li>
+  <li><a href="file:///Users/vikasinelnikova/github/project-2/Prod_account.html">Account Settings</a></li>
+</ul>
+</b></font>
+</header>
+</div>
+
+<style>
+
+body {
+  background-attachment: fixed;
+  margin: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url(https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87296160_2541345916139268_7935260488076623872_o.jpg?_nc_cat=102&_nc_oc=AQnpjeSP9xItb8ZXX7ZTPrUHItPqhseavRt9orVO0unGVt3a0TEQEYy6mvtDK1ivJtY&_nc_ht=scontent-sjc3-1.xx&_nc_tp=7&oh=b550a02d6660ce827b7a1e232c6af3ec&oe=5EB8F57C);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  color: #3E4153;
+  text-decoration: none;
+}
+
+/* ---------------------------------HEADER----------------------------------------- */
+
+.header {
+  /*background-color: #CCCCCC;*/
+  background: rgba(173, 173, 173, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  /* background-color: #CCCCCC; */
+  /*background: rgba(173, 173, 173, 0.8);*/
+}
+
+.header ul a{
+display: block;
+padding: 23px;
+border-right: 1px solid #858585;
+/* border: 1px solid #aaa; */
+}
+
+.header ul a:hover {
+  background-color: #A4A4A4;
+  /*background: rgba(192, 192, 192, 1);*/
+}
+
+.header .logo {
+float: left;
+display: block;
+font-size: 2em;
+padding: 10px 20px;
+}
+
+.logo img {
+  width: 105px;
+  height: 49px;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+  /*border: 1px solid #C70039;*/
+  padding: 43px 25px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+  background: #364855;
+  display: block;
+  height: 4px;
+  width: 25px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+  background: #364855;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: 8px;
+}
+
+.header .menu-icon .nav-icon:after {
+  background: #364855;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: -8px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 500px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 51em) {
+  .header li{
+    float: left;
+  }
+
+  .header li a{
+    padding: 30px 45px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+</style>
+
+</body>
+</html>
