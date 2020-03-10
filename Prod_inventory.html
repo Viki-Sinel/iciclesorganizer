@@ -1,38 +1,23 @@
 <html>
+    <head>
+        <title>Icicles Orginizer Inventory</title>
+    </head>
+    <body>
 
-<head>
-<title>Icicles Orginizer Inventory</title>
-</head>
+        <header class="header">
+          <div class="logo">
+          <a href="index.html"><img src ="https://iciclesorganizerlogo.s3-us-west-1.amazonaws.com/logo.png" alt=""></a>
+          </div>
 
-<body>
-
-<div class="home-page">
-
-<!--     _______________Header___________        -->
-
-  <header class="header">
-
-    <div class="logo">
-    <a href="index.html"><img src ="https://iciclesorganizerlogo.s3-us-west-1.amazonaws.com/logo.png" alt=""></a>
-    </div>
-
-    <input class="menu-btn" type="checkbox" id="menu-btn"/>
-    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-
-      <font size="4"><b>
-        <ul class="menu">
-      <li><a href="Prod_inventory.html">Inventory</a></li>
-      <li><a href="Prod_bases.html">Bases</a></li>
-      <li><a href="Prod_tasks.html">Tasks</a></li>
-      <li><a href="Prod_account.html">Account Settings</a></li>
-    </ul>
-</b></font>
-</header>
-</div>
-<br><br><br><br><br>
-
-
-<!-- __________________List____________________ -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+              <li><a href="Prod_inventory.html">Inventory</a></li>
+              <li><a href="Prod_bases.html">Bases</a></li>
+              <li><a href="Prod_tasks.html">Tasks</a></li>
+              <li><a href="Prod_account.html">Account Settings</a></li>
+            </ul>
+        </header>
 
 <div class="form">
 <div class="header-inv">
@@ -147,6 +132,8 @@
 
 </div>
 </div>
+</body>
+</html>
 
 <style>
 
@@ -161,13 +148,12 @@ body {
 
 a {
   color: #3E4153;
-  text-decoration: none;
+ text-decoration: none;
 }
 
-/*--------------------Header-------------------*/
+/* header */
 
 .header {
-  /*background-color: #CCCCCC;*/
   background: rgba(173, 173, 173, 0.8);
   position: fixed;
   width: 100%;
@@ -180,33 +166,34 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  /* background-color: #CCCCCC; */
-  /*background: rgba(173, 173, 173, 0.8);*/
+
 }
 
-.header ul a{
-display: block;
-padding: 23px;
-border-right: 1px solid #858585;
-/* border: 1px solid #aaa; */
+.header li a {
+  display: block;
+  padding: 23px;
+  border-right: 1px solid #858585;
 }
 
-.header ul a:hover {
+.header li a:hover,
+.header .menu-btn:hover {
   background-color: #A4A4A4;
-  /*background: rgba(192, 192, 192, 1);*/
 }
 
 .header .logo {
-float: left;
-display: block;
-font-size: 2em;
-padding: 10px 20px;
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-.logo img {
-  width: 78px;
-  height: 62px;
+.header .logo img{
+  width: 74px;
+  height: 58px;
 }
+
+/* menu */
 
 .header .menu {
   clear: both;
@@ -214,51 +201,52 @@ padding: 10px 20px;
   transition: max-height .2s ease-out;
 }
 
+/* menu icon */
+
 .header .menu-icon {
-  /*border: 1px solid #C70039;*/
-  padding: 43px 25px;
-  position: relative;
-  float: right;
   cursor: pointer;
+  float: right;
+  padding: 37px 25px;
+  position: relative;
+  user-select: none;
 }
 
 .header .menu-icon .nav-icon {
   background: #364855;
   display: block;
   height: 4px;
-  width: 25px;
   position: relative;
   transition: background .2s ease-out;
+  width: 25px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #364855;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 
 .header .menu-icon .nav-icon:before {
-  background: #364855;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
   top: 8px;
 }
 
 .header .menu-icon .nav-icon:after {
-  background: #364855;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
   top: -8px;
 }
+
+/* menu btn */
 
 .header .menu-btn {
   display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 500px;
+  max-height: 300px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .nav-icon {
@@ -267,20 +255,22 @@ padding: 10px 20px;
 
 .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
   transform: rotate(-45deg);
-  top: 0;
+  top:0;
 }
 
 .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   transform: rotate(45deg);
-  top: 0;
+  top:0;
 }
 
+
+/* 48em = 768px @ 16pt font */
+
 @media (min-width: 51em) {
-  .header li{
+  .header li {
     float: left;
   }
-
-  .header li a{
+  .header li a {
     padding: 30px 45px;
   }
   .header .menu {
@@ -288,14 +278,12 @@ padding: 10px 20px;
     float: right;
     max-height: none;
   }
-
   .header .menu-icon {
     display: none;
   }
 }
 
-
-/*------------------------------------------FORM--------------------------------------*/
+/*—FORM—*/
 
 .form {
   padding-bottom: 40px;
@@ -449,9 +437,6 @@ padding: 10px 20px;
   max-height: 0;
   transition: max-height .2s ease-out;
   flex: 18;
-  /* clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out; */
 }
 
 .header-inv .menu-ref-qty {
@@ -459,9 +444,6 @@ padding: 10px 20px;
   max-height: 0;
   transition: max-height .2s ease-out;
   flex: 2;
-  /* clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out; */
 }
 
 .header-inv .menu-ref-qty .qty {
@@ -484,7 +466,6 @@ padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
   font-size: 10px;
-  /* background-color: #008CBA; */
 }
 
 .header-inv .menu-ref-btnR {
@@ -676,258 +657,4 @@ padding: 10px 20px;
   /* display: block; */
   padding: 8px;
 }
-
-
-
-
-/*.inventory {
-  /*display: block;
-  flex: 1;
-  padding: 20px;
-  position: relative;
-}
-
-.header-inv {
-  background: rgba(192, 192, 192, 0.4);
-  text-align: center;
-  color: #3E4153;
-  padding: 90px;
-  float: left;
-  display: flex;
-  width: 100%;
-}
-
-.dry {
-  /*display: block;
-  flex: 1;
-  padding: 30px;
-  position: relative;
-}
-
-.refrigerate {
-  /*display: block;
-  flex: 1;
-  padding: 30px;
-  position: relative;
-}
-
-.dry .inv-dry-icon {
-  border: 1px solid #C70039;
-  padding: 43px 25px;
-}
-
-.header .inv-dry-icon .dry-icon {
-  background: #364855;
-  display: block;
-  height: 4px;
-  width: 25px;
-  position: relative;
-  transition: background .2s ease-out;
-}
-
-.dry:hover {
-  background: rgba(192, 192, 192, 0.7);
-}
-
-.refrigerate:hover {
-  background: rgba(192, 192, 192, 0.7);
-}
-
-.dry ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color: #CCCCCC;
-    background: rgba(192, 192, 192, 0.4);
-}
-
-.dry ul a {
-}
-
-.refrigerate ul {
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
-
-.refrigerate ul a {
-}
-
-
-
-
-/*
-.dry {
-  flex:1;
-  border-right: 1px solid #3E4153;
-  height: 96px;
-  position: relative;
-  z-index: 1;
-  background: rgba(192, 192, 192, 0.6);
-  max-width: 150px;
-  margin: 0 auto 70px;
-  padding: 70px;
-  text-align: center;
-  flex: 1;
-  color: #3E4153;
-}
-
-.refrigerate {
-  flex:1;
-  position: relative;
-  z-index: 1;
-  background: rgba(192, 192, 192, 0.6);
-  max-width: 150px;
-  margin: 0 auto 70px;
-  padding: 70px;
-  text-align: center;
-  flex: 1;
-  color: #3E4153;
-}
-
-.list {
-  background: rgba(192, 192, 192, 0.6);
-  display: flex;
-  margin: 0 auto 70px;
-  padding: 70px;
-  max-width: 300px;
-  max-height: 96px;
-  text-align: center;
-  color: #3E4153;
-}
-
-.list .dry:hover{
-  background: rgba(192, 192, 192, 0.7);
-}
-
-.list .refrigerate:hover{
-  background: rgba(192, 192, 192, 0.7);
-}*/
-
-
-
 </style>
-
-</body>
-</html>
-
-
-
-
-
-<!--
-<html>
-
-<head>
-<title>Icicles Orginizer Inventory</title>
-</head>
-
-<body>
-
-<div class="home-page">
-
-  <div class="header">
-<a href="file:///Users/vikasinelnikova/github/project-2/home.html"><img src ="/Users/vikasinelnikova/desktop/viktoriya/icicles/unnamed.png" alt=""></a>
-</div>
-
-<div class="inventory">
-<h1>Inventory</h1>
-</div>
-
-<div class="list">
-<div class="dry">
-  <h2>Dry</h2>
-</div>
-
-<div class="refrigerate">
-<h2>Keep </br>
-Refrigerated<h2>
-</div>
-</div>
-
-</div>
-
-<style>
-
-body {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87296160_2541345916139268_7935260488076623872_o.jpg?_nc_cat=102&_nc_oc=AQnpjeSP9xItb8ZXX7ZTPrUHItPqhseavRt9orVO0unGVt3a0TEQEYy6mvtDK1ivJtY&_nc_ht=scontent-sjc3-1.xx&_nc_tp=7&oh=b550a02d6660ce827b7a1e232c6af3ec&oe=5EB8F57C);
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-}
-
-.inventory {
-  text-align: center;
-  color: #3E4153;
-  margin: 0 auto 30px;
-  padding: 5px;
-
-}
-
-.header {
-  position: relative;
-  z-index: 1;
-  background: rgba(192, 192, 192, 0.8);
-  max-width: 1500px;
-  margin: 0 auto 30px;
-  padding: 5px;
-  text-align: center;
-}
-
-.header a {
-  text-decoration: none;
-  color: #404040;
-}
-
-.form {
-  position: relative;
-  z-index: 1;
-  background: rgba(192, 192, 192, 0.8);
-  max-width: 800px;
-  margin: 0 auto 100px;
-  padding: 100px;
-  text-align: left;
-}
-
-img {
-  width: 150px;
-  height: 69px;
-}
-
-.dry {
-  position: relative;
-  z-index: 1;
-  background: rgba(192, 192, 192, 0.8);
-  max-width: 200px;
-  margin: 0 auto 70px;
-  padding: 70px;
-  text-align: center;
-  flex: 1;
-  color: #3E4153;
-}
-
-.refrigerate {
-  position: relative;
-  z-index: 1;
-  background: rgba(192, 192, 192, 0.8);
-  max-width: 200px;
-  margin: 0 auto 70px;
-  padding: 70px;
-  text-align: center;
-  flex: 1;
-  color: #3E4153;
-}
-
-.list {
-  display: flex;
-
-}
-
-</style>
-
-</body>
-</html>
--->
