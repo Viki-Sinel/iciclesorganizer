@@ -1,0 +1,150 @@
+/* ----  CSS FILE  ---- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-attachment: fixed;
+  margin: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url(https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87296160_2541345916139268_7935260488076623872_o.jpg?_nc_cat=102&_nc_oc=AQnpjeSP9xItb8ZXX7ZTPrUHItPqhseavRt9orVO0unGVt3a0TEQEYy6mvtDK1ivJtY&_nc_ht=scontent-sjc3-1.xx&_nc_tp=7&oh=b550a02d6660ce827b7a1e232c6af3ec&oe=5EB8F57C);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.header img {
+  max-width: 75px;
+  max-height: 60px;
+  margin: 10px;
+  cursor: pointer;
+}
+.header {
+  background: rgba(173, 173, 173, 0.8);
+}
+
+/*--- Hamburger Menu ---*/
+
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  margin: 10px;
+  width: 75px;
+  height: 60px;
+  position: relative;
+  /* border: 1px solid #ff0000;  */
+}
+
+.header .menu-icon .nav-icon {
+  background: #364855;
+  display: block;
+  height: 6px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 35px;
+  float: right;
+  margin-top: 27px;
+  margin-right: 20px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #364855;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 10px;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -10px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+/*--- Hamburger Menu Animation ---*/
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 300px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+/* --- Body ---*/
+
+.form {
+  max-width: 355px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: rgba(173, 173, 173, 0.8);
+}
+
+.form h2 {
+  padding: 30px 30px 20px;
+  font-family: arial;
+  font-size: 50px;
+  color: #111;
+  line-height: 44px;
+}
+
+.form p {
+  padding: 0px 30px 20px;
+  font-family: arial;
+  font-size: 18px;
+  color: #111;
+  line-height: 24px;
+}
+
+/* --- Menu --- */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+
+}
+
+.header li a {
+  display: block;
+  padding: 23px;
+  border-right: 1px solid #858585;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #A4A4A4;
+}
+
+a {
+  color: #3E4153;
+ text-decoration: none;
+}
