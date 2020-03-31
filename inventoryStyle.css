@@ -22,6 +22,7 @@ body {
 }
 .header {
   background: rgba(173, 173, 173, 0.8);
+  margin-bottom: 30px;
 }
 
 /*--- Hamburger Menu ---*/
@@ -95,9 +96,8 @@ body {
 
 .form {
   max-width: 355px;
-  margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
+  /* margin-top: 30px; */
+  margin: 0 auto;
   background: rgba(173, 173, 173, 0.8);
 }
 
@@ -180,13 +180,13 @@ a {
   border-bottom: 1px solid #858585;
 }
 
-.logo-dry {
+.menu-1-title {
   color: #3E4153;
   text-align: center;
   padding: 20px;
 }
 
-.logo-ref {
+.menu-2-title {
   color: #3E4153;
   text-align: center;
   padding: 20px;
@@ -198,7 +198,8 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 4;
+  flex: 10;
+  font-size: 13px;
 }
 
 .header-inv .menu-dry-qty {
@@ -206,6 +207,7 @@ a {
   max-height: 0;
   transition: max-height .2s ease-out;
   flex: 1;
+  font-size: 13px;
 }
 
 .header-inv .menu-dry-qty .qty {
@@ -219,12 +221,12 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 2;
+  flex: 3;
 }
 
 .header-inv .menu-dry-btn .dryBtn {
   width: 50px;
-  height: 25px;
+  height: 22px;
   margin: 5px;
   cursor: pointer;
   font-size: 10px;
@@ -234,12 +236,12 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 2;
+  flex: 4;
 }
 
 .header-inv .menu-dry-btnR .dryBtnR {
   width: 62px;
-  height: 25px;
+  height: 22px;
   margin: 5px;
   cursor: pointer;
   font-size: 10px;
@@ -256,7 +258,8 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 1;
+  flex: 3;
+  font-size: 13px;
 }
 
 .header-inv .menu-dry-box li {
@@ -273,7 +276,8 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 5;
+  flex: 10;
+  font-size: 13px;
 }
 
 .header-inv .menu-ref-qty {
@@ -281,11 +285,12 @@ a {
   max-height: 0;
   transition: max-height .2s ease-out;
   flex: 1;
+  font-size: 13px;
 }
 
 .header-inv .menu-ref-qty .qty {
   width: 40px;
-  height: 25px;
+  height: 22px;
   margin: 5px;
   border-bottom: 1px solid #858585;
 }
@@ -294,12 +299,12 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 1;
+  flex: 3;
 }
 
 .header-inv .menu-ref-btn .refBtn {
   width: 50px;
-  height: 25px;
+  height: 22px;
   margin: 5px;
   cursor: pointer;
   font-size: 10px;
@@ -309,12 +314,12 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 1;
+  flex: 4;
 }
 
 .header-inv .menu-ref-btnR .refBtnR {
   width: 62px;
-  height: 25px;
+  height: 22px;
   margin: 5px;
   cursor: pointer;
   font-size: 10px;
@@ -331,7 +336,8 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 1;
+  flex: 3;
+  font-size: 13px;
 }
 
 .header-inv .menu-ref-box li {
@@ -418,4 +424,42 @@ a {
 .header-inv ul input {
   border-bottom: 1px solid #858585;
   padding: 8px;
-} */
+}
+
+/*----------- iPad resolution --------------*/
+
+@media only screen and (min-width: 768px) {
+
+  .form {
+    max-width: 708px;
+    margin: 0 auto;
+    background: rgba(173, 173, 173, 0.8);
+  }
+
+}
+
+/*----------- Desktop resolution --------------*/
+
+@media only screen and (min-width: 1000px) {
+
+  .form {
+    max-width: 708px;
+    margin: 0 auto;
+    background: rgba(173, 173, 173, 0.8);
+  }
+
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 30px 45px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
