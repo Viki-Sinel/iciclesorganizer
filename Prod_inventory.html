@@ -1,4 +1,155 @@
 <html>
+<head>
+
+<meta charset="utf-8">
+<title> Icicles Organizer Home </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="inventoryStyle.css">
+
+</head>
+
+<body>
+
+<header class="header">
+<img class="logo" src="images/logo.png"> <!--alt="mmtuts banner"-->
+
+<input class="menu-btn" type="checkbox" id="menu-btn" />
+<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+<ul class="menu">
+  <li><a href="Prod_inventory.html">Inventory</a></li>
+  <li><a href="Prod_bases.html">Bases</a></li>
+  <li><a href="Prod_tasks.html">Tasks</a></li>
+  <li><a href="Prod_account.html">Account Settings</a></li>
+</ul>
+
+</header>
+
+<div class="wrapper">
+  <article class="form">
+
+    <div class="header-inv">
+
+      <div class="inventory">
+    <font size="6">Inventory</font>
+    </div>
+
+    <div class="logo-dry">
+      <h3>Dry</h3>
+    </div>
+
+      <input class="dry" type="checkbox" id="dry"/>
+      <label class="inv-dry-icon" for="dry"><span class="dry-icon"></span></label>
+
+    <div class="menu-dry-flex">
+      <ul class="menu-dry">
+      <li><a href="">Almonds</a></li>
+      <li><a href="">Fruity Pabbles</a></li>
+      <li><a href="">Coconut Flakes</a></li>
+      <li><a href="">Oreos</a></li>
+      </ul>
+
+      <ul class="menu-dry-btn">
+        <li><button class="dryBtn">ADD</button></li>
+        <li><button class="dryBtn">ADD</button></li>
+        <li><button class="dryBtn">ADD</button></li>
+        <li><button class="dryBtn">ADD</button></li>
+      </ul>
+
+      <ul class="menu-dry-btnR">
+        <li><button class="dryBtnR">REMOVE</button></li>
+        <li><button class="dryBtnR">REMOVE</button></li>
+        <li><button class="dryBtnR">REMOVE</button></li>
+        <li><button class="dryBtnR">REMOVE</button></li>
+      </ul>
+
+      <ul class="menu-dry-qty">
+        <li>9</li>
+        <li>8</li>
+        <li>2</li>
+        <li>1</li>
+        <!--<li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
+        <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
+        <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
+        <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li> -->
+      </ul>
+
+        <ul class="menu-dry-box">
+        <li>box/es</li>
+        <li>box/es</li>
+        <li>bag/s</li>
+        <li>bag/s</li>
+      </ul>
+
+    </div>
+
+    <div class="logo-ref">
+      <h3>Keep <br>
+      Refrigerated</h3>
+    </div>
+
+      <input class="ref" type="checkbox" id="ref"/>
+      <label class="inv-ref-icon" for="ref"><span class="ref-icon"></span></label>
+
+    <div class="menu-ref-flex">
+    <ul class="menu-ref">
+    <li><a href="">Brownie Bites</a></li>
+    <li><a href="">Cheesecake Bites</a></li>
+    <li><a href="">Chocolate Waffle Bits</a></li>
+    <li><a href="">Chocolate Chips</a></li>
+    </ul>
+
+    <ul class="menu-ref-btn">
+      <li><button class="refBtn" id="refBtn" onClick="AddBtn()">ADD</button></li>
+      <li><button class="refBtn">ADD</button></li>
+      <li><button class="refBtn">ADD</button></li>
+      <li><button class="refBtn">ADD</button></li>
+    </ul>
+
+    <ul class="menu-ref-btnR">
+      <li><button class="refBtnR">REMOVE</button></li>
+      <li><button class="refBtnR">REMOVE</button></li>
+      <li><button class="refBtnR">REMOVE</button></li>
+      <li><button class="refBtnR">REMOVE</button></li>
+    </ul>
+
+    <ul class="menu-ref-qty">
+      <li>9</li>
+      <li>8</li>
+      <li>2</li>
+      <li>1</li>
+      <!-- <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
+      <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
+      <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
+      <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li> -->
+    </ul>
+
+      <ul class="menu-ref-box">
+      <li>box/es</li>
+      <li>box/es</li>
+      <li>bag/s</li>
+      <li>bag/s</li>
+    </ul>
+    <!--<ul class="menu-ref-qty">
+      <li><input type="text" class="qty"></li>
+      <li><input type="text" class="qty"></li>
+      <li><input type="text" class="qty"></li>
+      <li><input type="text" class="qty"></li>
+    </ul>-->
+    </div>
+
+    </div>
+
+  </article>
+</div>
+
+</body>
+</html>
+
+
+
+<!-- <html>
     <head>
         <title>Icicles Orginizer Inventory</title>
     </head>
@@ -60,10 +211,10 @@
     <li>8</li>
     <li>2</li>
     <li>1</li>
-    <!-- <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
+    <!--<li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
     <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
     <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
-    <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li> -->
+    <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
   </ul>
 
     <ul class="menu-dry-box">
@@ -113,7 +264,7 @@
   <!-- <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
   <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
   <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li>
-  <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li> -->
+  <li><input maxlength="4" placeholder="qty" type="text" class="qty"></li> --
 </ul>
 
   <ul class="menu-ref-box">
@@ -127,7 +278,7 @@
   <li><input type="text" class="qty"></li>
   <li><input type="text" class="qty"></li>
   <li><input type="text" class="qty"></li>
-</ul>-->
+</ul>--
 </div>
 
 </div>
@@ -135,7 +286,7 @@
 </body>
 </html>
 
-<!-- *********************************** Javascript part ********************************-->
+<!-- *********************************** Javascript part ********************************--
 
 <script>
 
@@ -149,7 +300,7 @@ function AddBtn() {
 </script>
 
 
-<!-- *********************************   CSS part ************************************* -->
+<!-- *********************************   CSS part ************************************* --
 
 
 <style>
@@ -674,4 +825,4 @@ a {
   /* display: block; */
   padding: 8px;
 }
-</style>
+</style> -->

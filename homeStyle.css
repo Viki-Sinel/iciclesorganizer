@@ -33,7 +33,7 @@ body {
   width: 75px;
   height: 60px;
   position: relative;
-  /* border: 1px solid #ff0000;  */
+  /* border: 1px solid #ff0000; */
 }
 
 .header .menu-icon .nav-icon {
@@ -44,7 +44,7 @@ body {
   transition: background .2s ease-out;
   width: 35px;
   float: right;
-  margin-top: 27px;
+  margin-top: 25px;
   margin-right: 20px;
 }
 
@@ -60,11 +60,11 @@ body {
 }
 
 .header .menu-icon .nav-icon:before {
-  top: 10px;
+  top: 11px;
 }
 
 .header .menu-icon .nav-icon:after {
-  top: -10px;
+  top: -11px;
 }
 
 .header .menu-btn {
@@ -105,15 +105,15 @@ body {
   padding: 30px 30px 20px;
   font-family: arial;
   font-size: 50px;
-  color: #111;
+  color: #3E4153;
   line-height: 44px;
 }
 
 .form p {
   padding: 0px 30px 20px;
   font-family: arial;
-  font-size: 18px;
-  color: #111;
+  font-size: 21px;
+  color: #3E4153;
   line-height: 24px;
 }
 
