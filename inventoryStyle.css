@@ -211,7 +211,7 @@ a {
 }
 
 .header-inv .menu-dry-qty .qty {
-  width: 40px;
+  width: 22px;
   height: 25px;
   margin: 5px;
   border-bottom: 1px solid #858585;
@@ -221,11 +221,11 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 3;
+  flex: 1;
 }
 
 .header-inv .menu-dry-btn .dryBtn {
-  width: 50px;
+  width: 18px;
   height: 22px;
   margin: 5px;
   cursor: pointer;
@@ -236,11 +236,11 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 4;
+  flex: 1;
 }
 
 .header-inv .menu-dry-btnR .dryBtnR {
-  width: 62px;
+  width: 18px;
   height: 22px;
   margin: 5px;
   cursor: pointer;
@@ -299,11 +299,11 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 3;
+  flex: 1;
 }
 
 .header-inv .menu-ref-btn .refBtn {
-  width: 50px;
+  width: 18px;
   height: 22px;
   margin: 5px;
   cursor: pointer;
@@ -314,11 +314,11 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 4;
+  flex: 1;
 }
 
 .header-inv .menu-ref-btnR .refBtnR {
-  width: 62px;
+  width: 18px;
   height: 22px;
   margin: 5px;
   cursor: pointer;
@@ -436,6 +436,118 @@ a {
     background: rgba(173, 173, 173, 0.8);
   }
 
+  /*------------------------- Set Up For DRY MENU -----------------------------*/
+
+  .header-inv .menu-dry {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 25;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-dry-btn {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-dry-qty {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-dry-btnR {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-dry-box  {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 3;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-dry-btn .dryBtn {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  .header-inv .menu-dry-btnR .dryBtnR {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  /*------------------------- Set Up For REF MENU -----------------------------*/
+
+  .header-inv .menu-ref {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 25;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-ref-qty {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-ref-btn {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-ref-btn .refBtn {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  .header-inv .menu-ref-btnR {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-ref-btnR .refBtnR {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  .header-inv .menu-ref-box  {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 3;
+    font-size: 13px;
+  }
+
 }
 
 /*----------- Desktop resolution --------------*/
@@ -461,5 +573,117 @@ a {
   }
   .header .menu-icon {
     display: none;
+  }
+
+  /*------------------------- Set Up For DRY MENU -----------------------------*/
+
+  .header-inv .menu-dry {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 25;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-dry-btn {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-dry-qty {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-dry-btnR {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-dry-box  {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 3;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-dry-btn .dryBtn {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  .header-inv .menu-dry-btnR .dryBtnR {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  /*------------------------- Set Up For REF MENU -----------------------------*/
+
+  .header-inv .menu-ref {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 25;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-ref-qty {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+    font-size: 13px;
+  }
+
+  .header-inv .menu-ref-btn {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-ref-btn .refBtn {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  .header-inv .menu-ref-btnR {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 1;
+  }
+
+  .header-inv .menu-ref-btnR .refBtnR {
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  .header-inv .menu-ref-box  {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 3;
+    font-size: 13px;
   }
 }
