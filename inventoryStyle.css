@@ -138,6 +138,9 @@ a {
 
 /*--------------FORM----------------*/
 
+.header-inv {
+  margin-bottom: 100px;
+}
 
 .header-inv ul {
   margin: 0;
@@ -204,63 +207,59 @@ a {
 
 .header-inv .menu-dry-qty {
   clear: both;
-  max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 1;
+  max-height: 0;
+  flex: 4;
   font-size: 13px;
 }
 
-.header-inv .menu-dry-qty .qty {
-  width: 22px;
-  height: 25px;
-  margin: 5px;
-  border-bottom: 1px solid #858585;
+.menu-dry-qty li {
+  padding: 5px;
 }
 
-.header-inv .menu-dry-btn {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-  flex: 1;
-}
+  input {
+    border: none;
+    outline: none;
+    margin: 0 4px !important;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba (0,0,0,.5);
+    background: #AD8585;
+    color: #fff;
+  }
 
-.header-inv .menu-dry-btn .dryBtn {
-  width: 18px;
-  height: 22px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 10px;
-}
+  input:hover, input:focus {
+    background: #826464;
+    color: #fff;
+  }
 
-.header-inv .menu-dry-btnR {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-  flex: 1;
-}
+  .nice-number button {
+    border: none;
+    outline: none;
+    padding: 0 5px 3px;
+    border-radius: 5px;
+    height: 20px;
+    background: #3B476E;
+    color: #fff;
+  }
 
-.header-inv .menu-dry-btnR .dryBtnR {
-  width: 18px;
-  height: 22px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 10px;
-}
-.menu-dry-btnR button:hover{
-  background: #D8D7D7;
-}
+  .nice-number button:hover {
+    background: #29314C;
+  }
 
-.menu-dry-btn button:hover{
-  background: #D8D7D7;
-}
+  .header-inv .menu-dry-qty .qty {
+    width: 20px !important;
+    height: 4px !important;
+    border-bottom: 1px solid #858585;
+    margin: 0px;
+  }
 
-.header-inv .menu-dry-box  {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-  flex: 3;
-  font-size: 13px;
-}
+  .header-inv .menu-dry-box  {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex: 3;
+    font-size: 13px;
+  }
 
 .header-inv .menu-dry-box li {
   border-bottom: 1px solid #858585;
@@ -271,6 +270,13 @@ a {
 }
 
 /*------------------------- Set Up For REF MENU -----------------------------*/
+
+.header-inv .menu-ref-qty .qty {
+  width: 20px !important;
+  height: 4px !important;
+  border-bottom: 1px solid #858585;
+  margin: 0px;
+}
 
 .header-inv .menu-ref {
   clear: both;
@@ -284,7 +290,7 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  flex: 1;
+  flex: 4;
   font-size: 13px;
 }
 
@@ -293,43 +299,6 @@ a {
   height: 22px;
   margin: 5px;
   border-bottom: 1px solid #858585;
-}
-
-.header-inv .menu-ref-btn {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-  flex: 1;
-}
-
-.header-inv .menu-ref-btn .refBtn {
-  width: 18px;
-  height: 22px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 10px;
-}
-
-.header-inv .menu-ref-btnR {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-  flex: 1;
-}
-
-.header-inv .menu-ref-btnR .refBtnR {
-  width: 18px;
-  height: 22px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 10px;
-}
-.menu-ref-btnR button:hover{
-  background: #D8D7D7;
-}
-
-.menu-ref-btn button:hover{
-  background: #D8D7D7;
 }
 
 .header-inv .menu-ref-box  {
@@ -348,20 +317,23 @@ a {
   text-decoration: none;
 }
 
+.menu-ref-qty li {
+  padding: 5px;
+}
 /* ------------ICONS-----------------*/
 
 .header-inv .inv-dry-icon {
-  padding: 30px 100%;
+  padding: 30px 50%;
   position: relative;
   cursor: pointer;
-  top: -50;
+  top: -30;
 }
 
 .header-inv .inv-ref-icon {
-  padding: 30px 100%;
+  padding: 30px 50%;
   position: relative;
   cursor: pointer;
-  top: -65;
+  top: -45;
 }
 
 .header-inv .dry {
@@ -442,30 +414,54 @@ a {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
-    flex: 25;
+    flex: 20;
     font-size: 13px;
-  }
-
-  .header-inv .menu-dry-btn {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
   }
 
   .header-inv .menu-dry-qty {
     clear: both;
-    max-height: 0;
     transition: max-height .2s ease-out;
-    flex: 1;
-    font-size: 13px;
+    flex: 4;
   }
 
-  .header-inv .menu-dry-btnR {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
+  input {
+    border: none;
+    outline: none;
+    margin: 0 5px !important;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba (0,0,0,.5);
+    background: #AD8585;
+    color: #fff;
+  }
+
+  input:hover, input:focus {
+    background: #826464;
+    color: #fff;
+  }
+
+  .nice-number button {
+    border: none;
+    outline: none;
+    padding: 0 5px 3px;
+    border-radius: 5px;
+    height: 20px;
+    background: #3B476E;
+    color: #fff;
+  }
+
+  .nice-number button:hover {
+    background: #29314C;
+  }
+
+  .header-inv .menu-dry-qty .qty {
+    width: 20px !important;
+    height: 4px !important;
+    border-bottom: 1px solid #858585;
+    margin: 0px;
+  }
+
+  .header-inv .menu-dry-qty li {
+    padding: 5px;
   }
 
   .header-inv .menu-dry-box  {
@@ -476,77 +472,69 @@ a {
     font-size: 13px;
   }
 
-  .header-inv .menu-dry-btn .dryBtn {
-    width: 18px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
-
-  .header-inv .menu-dry-btnR .dryBtnR {
-    width: 18px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
-
   /*------------------------- Set Up For REF MENU -----------------------------*/
 
-  .header-inv .menu-ref {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 25;
-    font-size: 13px;
-  }
+    .header-inv .menu-ref {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+      flex: 20;
+      font-size: 13px;
+    }
 
-  .header-inv .menu-ref-qty {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
-    font-size: 13px;
-  }
+    .header-inv .menu-ref-qty {
+      clear: both;
+      transition: max-height .2s ease-out;
+      flex: 4;
+    }
 
-  .header-inv .menu-ref-btn {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
-  }
+    input {
+      border: none;
+      outline: none;
+      margin: 0 5px !important;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba (0,0,0,.5);
+      background: #AD8585;
+      color: #fff;
+    }
 
-  .header-inv .menu-ref-btn .refBtn {
-    width: 22px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
+    input:hover, input:focus {
+      background: #826464;
+      color: #fff;
+    }
 
-  .header-inv .menu-ref-btnR {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
-  }
+    .nice-number button {
+      border: none;
+      outline: none;
+      padding: 0 5px 3px;
+      border-radius: 5px;
+      height: 20px;
+      background: #3B476E;
+      color: #fff;
+    }
 
-  .header-inv .menu-ref-btnR .refBtnR {
-    width: 22px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
+    .nice-number button:hover {
+      background: #29314C;
+    }
 
-  .header-inv .menu-ref-box  {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 3;
-    font-size: 13px;
-  }
+    .header-inv .menu-ref-qty .qty {
+      width: 20px !important;
+      height: 4px !important;
+      border-bottom: 1px solid #858585;
+      margin: 0px;
+    }
+
+    .header-inv .menu-ref-qty li {
+      padding: 5px;
+    }
+
+    .header-inv .menu-ref-box  {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+      flex: 3;
+      font-size: 13px;
+    }
 
 }
 
@@ -581,30 +569,54 @@ a {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
-    flex: 25;
+    flex: 20;
     font-size: 13px;
-  }
-
-  .header-inv .menu-dry-btn {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
   }
 
   .header-inv .menu-dry-qty {
     clear: both;
-    max-height: 0;
     transition: max-height .2s ease-out;
-    flex: 1;
-    font-size: 13px;
+    flex: 4;
   }
 
-  .header-inv .menu-dry-btnR {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
+  input {
+    border: none;
+    outline: none;
+    margin: 0 5px !important;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba (0,0,0,.5);
+    background: #AD8585;
+    color: #fff;
+  }
+
+  input:hover, input:focus {
+    background: #826464;
+    color: #fff;
+  }
+
+  .nice-number button {
+    border: none;
+    outline: none;
+    padding: 0 5px 3px;
+    border-radius: 5px;
+    height: 20px;
+    background: #3B476E;
+    color: #fff;
+  }
+
+  .nice-number button:hover {
+    background: #29314C;
+  }
+
+  .header-inv .menu-dry-qty .qty {
+    width: 20px !important;
+    height: 4px !important;
+    border-bottom: 1px solid #858585;
+    margin: 0px;
+  }
+
+  .header-inv .menu-dry-qty li {
+    padding: 5px;
   }
 
   .header-inv .menu-dry-box  {
@@ -615,75 +627,67 @@ a {
     font-size: 13px;
   }
 
-  .header-inv .menu-dry-btn .dryBtn {
-    width: 18px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
-
-  .header-inv .menu-dry-btnR .dryBtnR {
-    width: 22px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
-
   /*------------------------- Set Up For REF MENU -----------------------------*/
 
-  .header-inv .menu-ref {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 25;
-    font-size: 13px;
-  }
+    .header-inv .menu-ref {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+      flex: 20;
+      font-size: 13px;
+    }
 
-  .header-inv .menu-ref-qty {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
-    font-size: 13px;
-  }
+    .header-inv .menu-ref-qty {
+      clear: both;
+      transition: max-height .2s ease-out;
+      flex: 4;
+    }
 
-  .header-inv .menu-ref-btn {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
-  }
+    input {
+      border: none;
+      outline: none;
+      margin: 0 5px !important;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba (0,0,0,.5);
+      background: #AD8585;
+      color: #fff;
+    }
 
-  .header-inv .menu-ref-btn .refBtn {
-    width: 18px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
+    input:hover, input:focus {
+      background: #826464;
+      color: #fff;
+    }
 
-  .header-inv .menu-ref-btnR {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 1;
-  }
+    .nice-number button {
+      border: none;
+      outline: none;
+      padding: 0 5px 3px;
+      border-radius: 5px;
+      height: 20px;
+      background: #3B476E;
+      color: #fff;
+    }
 
-  .header-inv .menu-ref-btnR .refBtnR {
-    width: 22px;
-    height: 22px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 10px;
-  }
+    .nice-number button:hover {
+      background: #29314C;
+    }
 
-  .header-inv .menu-ref-box  {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex: 3;
-    font-size: 13px;
+    .header-inv .menu-ref-qty .qty {
+      width: 20px !important;
+      height: 4px !important;
+      border-bottom: 1px solid #858585;
+      margin: 0px;
+    }
+
+    .header-inv .menu-ref-qty li {
+      padding: 5px;
+    }
+
+    .header-inv .menu-ref-box  {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+      flex: 3;
+      font-size: 13px;
+    }
   }
-}
