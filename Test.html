@@ -15,7 +15,7 @@ $(function(){
 });
 </script>
 
-<link rel="stylesheet" href="inventoryStyle.css">
+<link rel="stylesheet" href="testStyle.css">
 
 </head>
 
@@ -34,9 +34,8 @@ $(function(){
 </ul>
 
 </header>
-
 <div class="wrapper">
-  <article class="form">
+  <article class="form1">
 
     <div class="header-inv">
 
@@ -59,12 +58,18 @@ $(function(){
       <li><a href="">Oreos</a></li>
       </ul>
 
+<form>
+  <ul class="menu-dry-btn">
+    <li><button id="qty-btn">Save</button></li>
+  </ul>
+
       <ul class="menu-dry-qty">
-        <li><input type="number" class="qty" value="0"></li>
-        <li><input type="number" class="qty" value="0"></li>
-        <li><input type="number" class="qty" value="0"></li>
-        <li><input type="number" class="qty" value="0"></li>
+        <li><input type="number" class="qty" value="0" id="alm"></li>
+        <li><input type="number" class="qty" value="0" id="fp"></li>
+        <li><input type="number" class="qty" value="0" id="coco"></li>
+        <li><input type="number" class="qty" value="0" id="oreo"></li>
       </ul>
+</form>
 
         <ul class="menu-dry-box">
         <li>box/es</li>
@@ -91,12 +96,14 @@ $(function(){
     <li><a href="">Chocolate Chips</a></li>
     </ul>
 
+<form>
     <ul class="menu-ref-qty">
-      <li><input type="number" class="qty" value="0"></li>
-      <li><input type="number" class="qty" value="0"></li>
-      <li><input type="number" class="qty" value="0"></li>
-      <li><input type="number" class="qty" value="0"></li>
+      <li><input type="number" class="qty" value="0" id="brownie"></li>
+      <li><input type="number" class="qty" value="0" id="cheescake"></li>
+      <li><input type="number" class="qty" value="0" id="waffles"></li>
+      <li><input type="number" class="qty" value="0" id="ch-chips"></li>
     </ul>
+</form>
 
       <ul class="menu-ref-box">
       <li>box/es</li>
@@ -110,6 +117,36 @@ $(function(){
 
   </article>
 </div>
+
+<script >
+
+  let qtys = [];
+
+  const changeQtyDry = (ev)=>{
+    ev.preventDefault();
+    let qty = {
+      id: Date.now(),
+      alm: document.getElementById('alm').value,
+      fp: document.getElementById('fp').value,
+      coco: document.getElementById('coco').value,
+      oreo: document.getElementById('oreo').value
+      // brownie: document.getElementById('brownie').value,
+      // cheescake: document.getElementById('cheescake').value,
+      // waffles: document.getElementById('waffles').value,
+      // chips: document.getElementById('ch-chips').value
+    }
+    qtys.push(qty);
+    console.warn('added', {qtys});
+    // let pre = document.querySelector('#msg pre');
+    // pre.textContent = '\n' + JSON.srtingify(qtys, '\t', 2);
+
+    localStorage.getItem('QuantityList', JSON.stringify(qtys) );
+  }
+
+  document.addEventListener('DOMContentLoaded', ()=> {
+    document.getElementById('qty-btn').addEventListener('click', changeQtyDry); });
+
+</script>
 
 </body>
 </html>
