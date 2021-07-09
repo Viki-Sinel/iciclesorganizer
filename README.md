@@ -1,2 +1,2 @@
-# project-2
+# Keep Bitcoin.js
 second project
